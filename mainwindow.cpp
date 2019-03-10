@@ -7,13 +7,10 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QPixmap pixmap;
-    QIcon ButtonIcon;
-    pixmap.load(":/btn4.jpg");
-    ButtonIcon.addPixmap(pixmap);
-    ui->pushButton_4->setIcon(ButtonIcon);
-    ui->pushButton_4->setIconSize(pixmap.rect().size());
-    ui->pushButton_4->setFixedSize(pixmap.rect().size());
+    ui->gridLayout->addWidget(&m_front);
+
+    connect(&m_front, SIGNAL(menuClicked()), this, SLOT(on_menu_clicked()));
+    connect(&m_menu, SIGNAL(cofnijClicked()), this, SLOT(on_cofnij_clicked()));
 }
 
 MainWindow::~MainWindow()
@@ -21,7 +18,14 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_menu_clicked()
 {
+    ui->gridLayout->replaceWidget(&m_front, &m_menu);
+    m_menu.show();
+}
 
+void MainWindow::on_cofnij_clicked()
+{
+    ui->gridLayout->replaceWidget(&m_menu, &m_front);
+    m_front.show();
 }
