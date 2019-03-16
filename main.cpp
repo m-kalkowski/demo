@@ -1,13 +1,14 @@
-#include "mainwindow.h"
-#include <QApplication>
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    a.setOverrideCursor(QCursor(Qt::BlankCursor));
-    MainWindow w;
-    w.setStyleSheet("background-color:#343434;");
-    w.showMaximized();
+    QGuiApplication app(argc, argv);
 
-    return a.exec();
+    QQmlApplicationEngine engine;
+    engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
+    if (engine.rootObjects().isEmpty())
+        return -1;
+
+    return app.exec();
 }
