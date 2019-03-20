@@ -1,8 +1,33 @@
 <RCC>
     <qresource prefix="/">
-        <file>main.qml</file>
-        <file>Receiver.qml</file>
-        <file>Clock.qml</file>
-        <file>Background.qml</file>
+        <file>ui/Background.qml</file>
+        <file>ui/main.qml</file>
+        <file>ui/MainView/images/data.png</file>
+        <file>ui/MainView/images/menu.jpg</file>
+        <file>ui/MainView/images/program_pracy.png</file>
+        <file>ui/MainView/images/program_status.jpg</file>
+        <file>ui/MainView/images/status.png</file>
+        <file>ui/MainView/images/status_ok.jpg</file>
+        <file>ui/MainView/Clock.qml</file>
+        <file>ui/MainView/DataButton.qml</file>
+        <file>ui/MainView/MainView.qml</file>
+        <file>ui/MainView/MenuButton.qml</file>
+        <file>ui/MainView/ProgramStatusButton.qml</file>
+        <file>ui/MainView/StatusButton.qml</file>
+        <file>ui/MenuView/images/komunikacja.jpg</file>
+        <file>ui/MenuView/images/lista_zadan.jpg</file>
+        <file>ui/MenuView/images/podglad_konsoli.jpg</file>
+        <file>ui/MenuView/images/program_pracy.jpg</file>
+        <file>ui/MenuView/images/przeglad_konfiguracji.jpg</file>
+        <file>ui/MenuView/images/statusy_urzadzen.jpg</file>
+        <file>ui/MenuView/MenuView.qml</file>
+        <file>ui/MenuView/CommunicationButton.qml</file>
+        <file>ui/MenuView/TaskListButton.qml</file>
+        <file>ui/MenuView/CurrentJobButton.qml</file>
+        <file>ui/MenuView/ConfigurationButton.qml</file>
+        <file>ui/MenuView/DeviceStatusButton.qml</file>
+        <file>ui/MenuView/ConsoleButton.qml</file>
+        <file>ui/MenuView/HomeButton.qml</file>
+        <file>ui/MenuView/images/home.png</file>
     </qresource>
 </RCC>

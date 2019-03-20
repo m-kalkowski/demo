@@ -8,7 +8,6 @@ Item {
         color: "#353434"
         anchors.fill: parent
     }
-
 }
 
 
